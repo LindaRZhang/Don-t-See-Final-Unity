@@ -4,6 +4,9 @@ public class followp1 : MonoBehaviour
 {
     public Transform player; //get like the transform or position of character
                              //if there is no offset then it is 1st person perspective
+    void Start(){
+	   // player.position = transform.position;
+    }
     void Update()
     {
         transform.position = player.position;
