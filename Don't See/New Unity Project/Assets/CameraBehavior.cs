@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class followp1 : MonoBehaviour
+public class CameraBehavior : MonoBehaviour
 {
     public Transform player; //get like the transform or position of character
                              //if there is no offset then it is 1st person perspective

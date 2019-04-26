@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class move : MonoBehaviour
+public class CharacterMove : MonoBehaviour
 {
     public Transform characterBody;
     public Rigidbody characterBodyrb;
