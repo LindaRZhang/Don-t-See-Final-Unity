@@ -4,12 +4,10 @@ public class CameraBehavior : MonoBehaviour
 {
     public Transform player; //get like the transform or position of character
                              //if there is no offset then it is 1st person perspective
-    void Start(){
-	   // player.position = transform.position;
-    }
+    public Vector3 offset;
     void Update()
     {
-        transform.position = player.position;
+        transform.position = player.position+offset;
         if (Input.GetKey("j"))//rotate left
         {
             transform.Rotate(Vector3.down * Time.deltaTime * 90f);
