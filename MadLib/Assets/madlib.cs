@@ -4,8 +4,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
-public class madlib : MonoBehaviour
+/* Linda Rong Zhang
+*  This file executes the madlib game
+*/
+public class Madlib : MonoBehaviour
 {
     public string story = "Yesterday, [person] " +
         "and I went to the park. On our way to the [adjective] park" +

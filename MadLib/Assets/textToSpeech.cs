@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using System;
-//Citation https://www.youtube.com/watch?v=RDkDXZ8P1bg&t=116s
+/* Linda Rong Zhang
+*  Text to speech in progress, this file dont work yet
+*  Citation https://www.youtube.com/watch?v=RDkDXZ8P1bg&t=116s
+*/
 
-public class textToSpeech : MonoBehaviour
+public class TextToSpeech : MonoBehaviour
 {
     public InputField input;
     public AudioSource _audio;
@@ -29,7 +32,7 @@ public class textToSpeech : MonoBehaviour
     public void OnEnter()
     {
         GameObject mad = GameObject.Find("Text");
-        madlib other = (madlib)mad.GetComponent(typeof(madlib));
+        Madlib other = (Madlib)mad.GetComponent(typeof(Madlib));
         other.z = true;
         StartCoroutine(DownloadTheAudio());
 
