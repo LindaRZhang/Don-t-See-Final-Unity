@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-//citation:https://www.youtube.com/watch?v=ORD7gsuLivE
-//citation:https://www.youtube.com/watch?v=BzBIK4_WSJY
+//citation: https://www.youtube.com/watch?v=ORD7gsuLivE
+//citation: https://www.youtube.com/watch?v=BzBIK4_WSJY
 public class move : MonoBehaviour
 {
     public Transform t;

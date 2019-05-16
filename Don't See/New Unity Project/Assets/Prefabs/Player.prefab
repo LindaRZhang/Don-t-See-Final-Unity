@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &3174598432099720110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,9 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0ef175296594340953a971294dfaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterBody: {fileID: 3174598432099720108}
-  characterBodyrb: {fileID: 0}
-  characterCamera: {fileID: 0}
+  t: {fileID: 0}
+  rb: {fileID: 0}
+  cameraa: {fileID: 0}
 --- !u!1 &3174598432285903923
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Wall : MonoBehaviour {
+public class Door : MonoBehaviour {
 	// Start is called before the first frame update
 	public UnityEvent userInputOpen = new UnityEvent();
 	public UnityEvent userInputClosed = new UnityEvent();
