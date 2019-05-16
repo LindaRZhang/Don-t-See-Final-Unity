@@ -26,12 +26,14 @@ public class Madlib : MonoBehaviour
     private int currentWordIndex = 0;
     private bool state = false;
     public bool z = false;
-
+    public AudioSource Congrats;
+    public AudioClip Song;
     public void askToEnter()
     {
         input.text = "";
         input.placeholder.GetComponent<Text>().text = "Enter a " + w[currentWordIndex]; //change placeholder
         input.ActivateInputField();//let the blinker goes to the next one for inputfield
+        Congrats.clip = Song;
     }
     private void makeSelected()
     {
@@ -47,17 +49,30 @@ public class Madlib : MonoBehaviour
         input.text = "start";
         z = true;
     }
-
+    public void Clear()
+    {
+        if (input.text.ToLower().Contains("clear") || input.text.ToLower() == "")
+        {
+            input.text = "";
+            makeSelected();
+        }
+    }
     private void Update()
     {
         if (Input.GetKeyDown("return") || z == true)//when in the input field, the user typed enter
         {
             word.text = "Welcome to MadLib";
+            Clear();
             if (input.text.ToLower() == "start" && state == false) // if the input is equal to start then do the following
             {
                 SSStart();
+                Clear();
                 askToEnter();
                 state = true;
+            }
+            if (input.text.ToLower() != "start" && state == false)
+            {
+                Clear();
             }
             else if(state == true)
             {
@@ -65,6 +80,7 @@ public class Madlib : MonoBehaviour
                 {
                     inputed.Add(input.text);
                     currentWordIndex++;
+                    Clear();
                     askToEnter();
                 }
                 else
@@ -106,5 +122,7 @@ public class Madlib : MonoBehaviour
         }
         word.text = Finish;
         input.text = "Congratulations!";
+        input.DeactivateInputField();
+        Congrats.Play();
     }
 }

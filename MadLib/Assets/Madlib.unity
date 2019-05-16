@@ -343,7 +343,7 @@ MonoBehaviour:
   t: {fileID: 528829527}
   player: {fileID: 1150192423}
   sitting: 0
-  rb: {fileID: 0}
+  rb: {fileID: 1150192419}
 --- !u!82 &188246100
 AudioSource:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 54}
+  m_AnchoredPosition: {x: 6, y: 40}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474930650
@@ -805,6 +805,8 @@ MonoBehaviour:
   Finish: 
   count: 0
   z: 0
+  Congrats: {fileID: 188246100}
+  Song: {fileID: 8300000, guid: e673503e9d2bcbd48b91d4412ee7fa96, type: 3}
 --- !u!1 &484779845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 406a820c0a319d444a69a40d56b8be03,
@@ -1688,6 +1690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes: {fileID: 534669904}
   sensativity: 3
+  player: {fileID: 1150192423}
 --- !u!54 &1150192419
 Rigidbody:
   m_ObjectHideFlags: 0

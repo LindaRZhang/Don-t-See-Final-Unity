@@ -13,6 +13,7 @@ public class MouseCameraMove : MonoBehaviour
     float mouseFB; //front and back of mouse
     float mouseLR; //left right mouse moving
     float speed = 2;
+    public Transform player;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -27,7 +28,7 @@ public class MouseCameraMove : MonoBehaviour
         transform.Rotate(0, mouseX * sensativity, 0);
         Vector3 movement = new Vector3(mouseLR * Time.deltaTime * speed, 0, mouseFB * Time.deltaTime * speed);
         Vector3 gravity = new Vector3(0,(float)9.8,0);
-        controller.Move((transform.rotation * movement)-gravity); //move in camera direction-gravity
+        controller.Move((transform.rotation * movement) - gravity); //move in camera direction-gravity
         eyes.transform.Rotate(-mouseY * sensativity, 0, 0);
     }
 }

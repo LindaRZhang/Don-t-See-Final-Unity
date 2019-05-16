@@ -27,6 +27,7 @@ public class SpeechToText : MonoBehaviour
         actions.Add("sit", sit);
         actions.Add("stand", stand);
         actions.Add("chair", chair);
+        actions.Add("clear", clear);
 
         key = new KeywordRecognizer(actions.Keys.ToArray());//object
         key.OnPhraseRecognized += Recgon;//when OnPhraseRecognize event occur it will call function Recgon
@@ -64,6 +65,12 @@ public class SpeechToText : MonoBehaviour
         Madlib other = (Madlib)mad.GetComponent(typeof(Madlib));
         other.z = true;
         other.OnSaidStart();
+    }
+    private void clear()
+    {
+        GameObject mad = GameObject.Find("Text");
+        Madlib other = (Madlib)mad.GetComponent(typeof(Madlib));
+        other.Clear();
     }
     private void foward()
     {
