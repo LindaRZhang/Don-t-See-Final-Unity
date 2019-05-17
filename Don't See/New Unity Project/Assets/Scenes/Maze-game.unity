@@ -1631,6 +1631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3174598432099720081, guid: 949eccdfc97011c8db9eb0a925ca3af8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3174598432099720108, guid: 949eccdfc97011c8db9eb0a925ca3af8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2661,6 +2666,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576970042}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1599127650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4112867307559517604, guid: b8987cd9b184c3ea689cbf399845de27,
+    type: 3}
+  m_PrefabInstance: {fileID: 2006359294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1599127651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599127650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c142569c87518ddbb38d5c1afc4891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Madlib
+--- !u!65 &1599127654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599127650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1603738046
 GameObject:
   m_ObjectHideFlags: 0
