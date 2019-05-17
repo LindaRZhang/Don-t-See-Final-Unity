@@ -12,7 +12,7 @@ public class MouseCameraMove : MonoBehaviour
     float mouseY;
     float mouseFB; //front and back of mouse
     float mouseLR; //left right mouse moving
-    float speed = 2;
+    float speed = 5;
     public Transform player;
     private void Start()
     {

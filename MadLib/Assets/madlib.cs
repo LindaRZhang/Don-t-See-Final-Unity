@@ -28,20 +28,44 @@ public class Madlib : MonoBehaviour
     public bool z = false;
     public AudioSource Congrats;
     public AudioClip Song;
+
+    public void Clear()
+    {
+        if ((0 < input.text.Count()))
+        {
+            input.text = "";
+            input.ActivateInputField(); //let the blinker goes 
+        }
+    }
+
     public void askToEnter()
     {
         input.text = "";
+        Clear();
         input.placeholder.GetComponent<Text>().text = "Enter a " + w[currentWordIndex]; //change placeholder
-        input.ActivateInputField();//let the blinker goes to the next one for inputfield
         Congrats.clip = Song;
     }
-    private void makeSelected()
+
+    public void makeSelected()
     {
         input.ActivateInputField();
     }
     private void Start()
     {
         Invoke("makeSelected", 0.1f);
+        if (Input.GetKeyDown("return")) { 
+            if (input.text.ToLower() == "start" && state == false) // if the input is equal to start then do the following
+            {
+            SSStart();
+            askToEnter();
+            state = true;
+                z = true;
+            }
+            else if (input.text.ToLower() != "start" && state == false)
+            {
+                Clear();
+            }
+        }
     }
 
     public void OnSaidStart()
@@ -49,48 +73,38 @@ public class Madlib : MonoBehaviour
         input.text = "start";
         z = true;
     }
-    public void Clear()
-    {
-        if (input.text.ToLower().Contains("clear") || input.text.ToLower() == "")
-        {
-            input.text = "";
-            makeSelected();
-        }
-    }
+    
     private void Update()
     {
-        if (Input.GetKeyDown("return") || z == true)//when in the input field, the user typed enter
+        if (input.text.ToLower().Contains("clear"))
         {
-            word.text = "Welcome to MadLib";
             Clear();
-            if (input.text.ToLower() == "start" && state == false) // if the input is equal to start then do the following
-            {
-                SSStart();
-                Clear();
-                askToEnter();
-                state = true;
-            }
-            if (input.text.ToLower() != "start" && state == false)
-            {
-                Clear();
-            }
-            else if(state == true)
+        }
+        if (Input.GetKeyDown("return") && z == true && input.text != "")//when in the input field, the user typed enter
+        {
+            Clear();
+            word.text = "Welcome to MadLib";
+            if (state == true)
             {
                 if (currentWordIndex <= w.Count())
                 {
                     inputed.Add(input.text);
                     currentWordIndex++;
-                    Clear();
                     askToEnter();
                 }
                 else
                 {
                     PrintStory();
+                    z = false;
+                    input.DeactivateInputField();
                 }
             }
-        }
-        z = false;
 
+        }
+        else
+        {
+            Start();
+        }
     }
 
     public void SSStart()
