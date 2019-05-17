@@ -11,7 +11,7 @@ public class Paddle : MonoBehaviour {
    // public AudioClip left1;
     public AudioSource right;
     //public AudioClip right1;
-    int ol = 0;
+    int ol = 1;
 
 
     // Update is called once per frame
