@@ -3,6 +3,7 @@ using UnityEngine.Windows.Speech;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 /* Linda Rong Zhang
 *  This file gets user voice commands and call corresponding function to execute
 *  Speech to text 
@@ -17,6 +18,7 @@ public class SpeechToText : MonoBehaviour
     private object myGameObject;
     public bool sitting = false;
     public Rigidbody rb;
+    public InputField input;
     private void Start()
     {
         actions.Add("foward",foward);//add word to dict and then call function if they hear that word "foward"
@@ -28,10 +30,16 @@ public class SpeechToText : MonoBehaviour
         actions.Add("stand", stand);
         actions.Add("chair", chair);
         actions.Add("clear", clear);
+        actions.Add("enter", enter);
 
         key = new KeywordRecognizer(actions.Keys.ToArray());//object
         key.OnPhraseRecognized += Recgon;//when OnPhraseRecognize event occur it will call function Recgon
         key.Start(); //start picking up voice
+    }
+    public void enter() {
+        GameObject mad = GameObject.Find("Text");
+        Madlib other = (Madlib)mad.GetComponent(typeof(Madlib));
+        other.entera = true;
     }
     public void sit()
     {
@@ -63,8 +71,8 @@ public class SpeechToText : MonoBehaviour
     {
         GameObject mad = GameObject.Find("Text");
         Madlib other = (Madlib)mad.GetComponent(typeof(Madlib));
-        other.z = true;
-        other.OnSaidStart();
+        input.text = "start";
+        other.Start();
     }
     private void clear()
     {

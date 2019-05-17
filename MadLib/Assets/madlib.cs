@@ -28,7 +28,36 @@ public class Madlib : MonoBehaviour
     public bool z = false;
     public AudioSource Congrats;
     public AudioClip Song;
-
+    public AudioClip verb;
+    public AudioClip noun;
+    public AudioClip Adj;
+    public AudioClip personName;
+    public bool entera;
+    List<AudioClip> clip = new List<AudioClip>();
+    public void soundForWhatToEnter()
+    {
+        clip.Add(personName);
+        clip.Add(Adj);
+        clip.Add(Adj);
+        clip.Add(noun);
+        clip.Add(Adj);
+        clip.Add(noun);
+        clip.Add(Adj);
+        clip.Add(verb);
+        clip.Add(verb);
+        clip.Add(personName);
+        clip.Add(verb);
+        clip.Add(Adj);
+        clip.Add(verb);
+    }
+    public void enter()
+    {
+        z = true;
+        if (z == true && input.text != "")
+        {
+            entera = true;
+        }
+    }
     public void Clear()
     {
         if ((0 < input.text.Count()))
@@ -43,15 +72,17 @@ public class Madlib : MonoBehaviour
         input.text = "";
         Clear();
         input.placeholder.GetComponent<Text>().text = "Enter a " + w[currentWordIndex]; //change placeholder
-        Congrats.clip = Song;
+        Congrats.clip = clip[currentWordIndex];
+        Congrats.Play();
     }
 
     public void makeSelected()
     {
         input.ActivateInputField();
     }
-    private void Start()
+    public void Start()
     {
+        soundForWhatToEnter();
         Invoke("makeSelected", 0.1f);
         if (Input.GetKeyDown("return")) { 
             if (input.text.ToLower() == "start" && state == false) // if the input is equal to start then do the following
@@ -67,20 +98,14 @@ public class Madlib : MonoBehaviour
             }
         }
     }
-
-    public void OnSaidStart()
-    {
-        input.text = "start";
-        z = true;
-    }
     
-    private void Update()
+    public void Update()
     {
-        if (input.text.ToLower().Contains("clear"))
+        if (input.text.ToLower().Contains("clear") || Input.GetKeyDown("space"))
         {
             Clear();
         }
-        if (Input.GetKeyDown("return") && z == true && input.text != "")//when in the input field, the user typed enter
+        if (Input.GetKeyDown("return") && z == true && input.text != "" || entera == true)//when in the input field, the user typed enter
         {
             Clear();
             word.text = "Welcome to MadLib";
@@ -91,6 +116,7 @@ public class Madlib : MonoBehaviour
                     inputed.Add(input.text);
                     currentWordIndex++;
                     askToEnter();
+                    entera = false;
                 }
                 else
                 {
@@ -137,6 +163,8 @@ public class Madlib : MonoBehaviour
         word.text = Finish;
         input.text = "Congratulations!";
         input.DeactivateInputField();
+        Congrats.clip = Song;
         Congrats.Play();
+        z = false;
     }
 }
