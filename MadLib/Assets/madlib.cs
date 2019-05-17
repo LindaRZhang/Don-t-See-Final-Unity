@@ -34,6 +34,7 @@ public class Madlib : MonoBehaviour
     public AudioClip personName;
     public bool entera;
     List<AudioClip> clip = new List<AudioClip>();
+    //got every audio clip from https://www.text2speech.org/ except the bump sound that I made
     public void soundForWhatToEnter()
     {
         clip.Add(personName);
