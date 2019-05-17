@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7755009500603569562}
   - component: {fileID: 7755009500603569563}
   - component: {fileID: 7755009500603569564}
-  - component: {fileID: 7755009500603569565}
+  - component: {fileID: 5757063048526130709}
   - component: {fileID: 7755009500603569559}
   - component: {fileID: 7755009500603569558}
   - component: {fileID: 7755009500603569557}
@@ -114,7 +114,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &7755009500603569565
+--- !u!114 &5757063048526130709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,14 +123,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7755009500603569566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0ef175296594340953a971294dfaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: c04845f4dd95dbf7f8ebe0f81154df22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyes: {fileID: 7755009501556749551}
+  eyes: {fileID: 0}
   sensativity: 3
-  player: {fileID: 7755009500603569560}
-  chara: {fileID: 7755009500603569558}
-  h: {fileID: 7755009501556749548}
+  player: {fileID: 0}
+  chara: {fileID: 0}
+  h: {fileID: 0}
 --- !u!143 &7755009500603569559
 CharacterController:
   m_ObjectHideFlags: 0
