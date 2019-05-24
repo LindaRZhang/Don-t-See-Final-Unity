@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 /* Linda Rong Zhang
 *  This file change camera position 
 *  Citation: https://www.youtube.com/watch?v=BzBIK4_WSJY
@@ -13,7 +14,7 @@ public class MouseCameraMove : MonoBehaviour
     float mouseY;
     float mouseFB; //front and back of mouse
     float mouseLR; //left right mouse moving
-    float speed = 5;
+    float speed = 4;
     public Transform player;
     public AudioSource chara;//bumping
     public AudioSource h;//walking
@@ -23,7 +24,15 @@ public class MouseCameraMove : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;//cursor disappear, press escape and ull see cursor
     }
-  
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "wall")
+        {
+            h.Stop();
+            chara.Play();
+        }
+
+    }
     void Update()
     {
         mouseFB = Input.GetAxis("Vertical");//vertical axis
@@ -44,15 +53,4 @@ public class MouseCameraMove : MonoBehaviour
                 h.Stop();
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "wall")
-        { 
-            chara.Play();
-        }
-
-    }
-    
-     
 }
