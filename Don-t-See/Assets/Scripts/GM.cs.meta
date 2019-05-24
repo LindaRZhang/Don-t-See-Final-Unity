@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3d99a304c6d4d4574995a77b19023434
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - livesText: {instanceID: 0}
+  - gameOver: {instanceID: 0}
+  - youWon: {instanceID: 0}
+  - bricksPrefab: {instanceID: 0}
+  - paddle: {instanceID: 0}
+  - deathParticles: {instanceID: 0}
+  - ball: {instanceID: 0}
+  - puddle: {fileID: 184350, guid: 158c7ca717f4547b8982834363efa65c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
