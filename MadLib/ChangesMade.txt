@@ -1,3 +1,0 @@
-- Delete move file and use MouseCameraMove Script for the character (capsule)
-- drag main camera to the character 
-- Add Character Controller to character
