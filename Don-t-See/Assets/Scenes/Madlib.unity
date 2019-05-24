@@ -818,6 +818,7 @@ MonoBehaviour:
   Adj: {fileID: 8300000, guid: 2e673d696cb28fa4bbe1e64ae8f9d524, type: 3}
   personName: {fileID: 8300000, guid: cd0893779fb0c0c4aa6ff1958eeb321a, type: 3}
   entera: 0
+  click: 1
 --- !u!54 &474930653
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class Madlib : MonoBehaviour
     public AudioClip Adj;
     public AudioClip personName;
     public bool entera;
+    public bool click = true;
     List<AudioClip> clip = new List<AudioClip>();
     //got every audio clip from https://www.text2speech.org/ except the bump sound that I made
     public void soundForWhatToEnter()
@@ -105,6 +106,22 @@ public class Madlib : MonoBehaviour
         if (input.text.ToLower().Contains("clear") || Input.GetKeyDown("space"))
         {
             Clear();
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            z = true;
+            if (click == true)//making inpu being able to type or not
+            {
+                input.interactable = true;
+                Debug.Log("Active Input");
+                click = false;
+            }
+            else
+            {
+                input.interactable = false;
+                Debug.Log("Dective Input");
+                click = true;
+            }
         }
         if (Input.GetKeyDown("return") && z == true && input.text != "" || entera == true)//when in the input field, the user typed enter
         {
