@@ -4,38 +4,42 @@ using UnityEngine.UI;
  [System.Serializable]
 public class Questions : MonoBehaviour
 {
-
-    public Button RedButton, YellowButton;
-    int count = 0;
-    List<string> questions = new List<string> {
-    "Question 1: 1 + 1 = 2?",
-    "Question 2: 1 + 1 = 3?",
-    "Question 3: 1 + 2 = 4?",
-    "Question 4: 1 + 5 = 6?"
-    };
-
-    List<bool> answers = new List<bool>
+    public  AudioSource music1;
+    public  AudioSource music2;
+    public class Question
     {
-        true,
-        false,
-        false,
-        true
-    };
-   
+        public string listquestion;
+        public bool answer;
+        public Question(string name, bool theAnswer)
+        {
+            listquestion = name;
+            answer = theAnswer;
+        }
 
+    }
+    public Button redButton, yellowButton;
+    int count = 0;
+    public static List<Question> questions = new List<Question> {
+        new Question("Question 1: 1 + 1 = 2?", true),
+        new Question("Question 2: 1 + 1 = 3?",false),
+        new Question("Question 3: 1 + 2 = 4?",false),
+        new Question("Question 4: 1 + 5 = 6?",true),
+        new Question("Nice gob!",true)
+    };
     Text question;
+
     // Start is called before the first frame update
 
-    
+
     void Start()
     {
 
 
         count = 0;
         question = GetComponent<Text>();
-        question.text = questions[count];
-        RedButton.onClick.AddListener(OnClick);
-        YellowButton.onClick.AddListener(OnClick);
+        question.text = questions[count].listquestion;
+        redButton.onClick.AddListener(OnClick);
+        yellowButton.onClick.AddListener(OnClick);
 
 
     }
@@ -46,40 +50,54 @@ public class Questions : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            YellowButton.onClick.AddListener(OnClick);
+            yellowButton.onClick.AddListener(OnClick);
             OnClick();
 
+
         }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            RedButton.onClick.AddListener(OnClick);
-            OnClick();
-        }
 
+            redButton.onClick.AddListener(OnClick);
+            OnClick();
+
+        }
     }
     void OnClick()
     {
-        count++;
-        if (count == questions.Count)
+        question = GetComponent<Text>();
+        question.text = questions[count+1].listquestion;
+        if (questions[count].answer == false)
         {
-            count = 0;
+            if (Input.GetKeyDown(KeyCode.RightArrow)){
+
+                music1.Stop();
+                music2.Play();
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow)){
+
+                music2.Stop();
+                music1.Play();
+            }
+        }
+
+        else if (questions[count].answer == true)
+        {
+            if (Input.GetKeyDown(KeyCode.RightArrow)){
+               
+                music2.Stop();
+                music1.Play();
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow)){
+
+                music1.Stop();
+                music2.Play();
+            }
 
         }
-        question = GetComponent<Text>();
-        question.text = questions[count];
-        
 
-
-
-
-
-
-
+        Debug.Log(count);
+        count++;
     }
-    void TOF()
-    {
-       
 
-
-    }
 }

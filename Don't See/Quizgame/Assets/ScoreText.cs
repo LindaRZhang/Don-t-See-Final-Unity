@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public Button RedButton;
+    public Button redButton;
     public static Text scores;
     public static int score;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class ScoreText : MonoBehaviour
         score = 0;
         scores = GetComponent<Text>();
         scores.text = "Score: " + score;
-        RedButton.onClick.AddListener(Point);
+        redButton.onClick.AddListener(Point);
     }
 
     // Update is called once per frame
@@ -23,7 +23,9 @@ public class ScoreText : MonoBehaviour
     {
         score++;
         scores.text = "Score: " + score;
+
     }
+
 
     void Update()
     {
@@ -31,6 +33,7 @@ public class ScoreText : MonoBehaviour
         {
             score++;
             scores.text = "Score: " + score;
+
         }
     }
 }
