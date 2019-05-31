@@ -70,6 +70,8 @@
     <Compile Include="Assets\3rdParty\Ameye\Alex's Door System Lite\Scripts\Helper Scripts\RotationTools.cs" />
     <Compile Include="Assets\3rdParty\Ameye\Alex's Door System Lite\Scripts\Helper Scripts\StayPositiveAttribute.cs" />
     <Compile Include="Assets\3rdParty\OldRadio\Okean\CamRotat.cs" />
+    <Compile Include="Assets\Questions.cs" />
+    <Compile Include="Assets\ScoreText.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Bricks.cs" />
     <Compile Include="Assets\Scripts\CameraFollowCharacter.cs" />
