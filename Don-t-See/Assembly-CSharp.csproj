@@ -74,7 +74,6 @@
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\followp1.cs" />
     <Compile Include="Assets\MouseCameraMoive.cs" />
-    <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
@@ -120,7 +119,7 @@
     <Compile Include="Assets\Scripts\FixPosition.cs" />
     <Compile Include="Assets\Scripts\GM.cs" />
     <Compile Include="Assets\Scripts\Madlib.cs" />
-    <Compile Include="Assets\Scripts\MouseCameraMoive.cs" />
+    <Compile Include="Assets\Scripts\MouseCameraMove.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SpeechToText.cs" />
