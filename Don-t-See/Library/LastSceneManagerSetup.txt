@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 sceneSetups:
 - path: Assets/Scenes/Simple-maze.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+=======
+sceneSetups: []
+>>>>>>> a9fc26ff37d54631fb504f4b8c0c946830e7c50e
