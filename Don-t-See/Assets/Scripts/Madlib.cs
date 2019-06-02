@@ -86,31 +86,29 @@ public class Madlib : MonoBehaviour
     {
         soundForWhatToEnter();
         Invoke("makeSelected", 0.1f);
-        if (Input.GetKeyDown("return")) { 
-            if (input.text.ToLower() == "start" && state == false) // if the input is equal to start then do the following
-            {
+        if (input.text.ToLower() == "start") // if the input is equal to start then do the following
+        {
             SSStart();
             askToEnter();
             state = true;
                 z = true;
-            }
-            else if (input.text.ToLower() != "start" && state == false)
-            {
-                Clear();
-            }
+        }
+        else if (input.text.ToLower() != "start" && state == false)
+        {
+            Clear();
         }
     }
     
     public void Update()
     {
-        if (input.text.ToLower().Contains("clear") || Input.GetKeyDown("space"))
+        if (input.text.ToLower().Contains("clear") || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             Clear();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             z = true;
-            if (click == true)//making inpu being able to type or not
+            if (click == true)//making input being able to type or not
             {
                 input.interactable = true;
                 Debug.Log("Active Input");
@@ -119,7 +117,7 @@ public class Madlib : MonoBehaviour
             else
             {
                 input.interactable = false;
-                Debug.Log("Dective Input");
+                input.DeactivateInputField();
                 click = true;
             }
         }

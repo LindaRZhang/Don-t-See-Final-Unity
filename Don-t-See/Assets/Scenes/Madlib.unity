@@ -1005,8 +1005,8 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669906}
   - component: {fileID: 534669907}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1640,9 +1640,9 @@ GameObject:
   - component: {fileID: 1150192421}
   - component: {fileID: 1150192420}
   - component: {fileID: 1150192419}
-  - component: {fileID: 1150192418}
   - component: {fileID: 1150192424}
   - component: {fileID: 1150192425}
+  - component: {fileID: 1150192418}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: player
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1150192417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0ef175296594340953a971294dfaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: c570233776d154204aaa25a0e7ac451b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eyes: {fileID: 534669904}

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
  [System.Serializable]
 public class Questions : MonoBehaviour
 {
@@ -140,6 +141,8 @@ public class Questions : MonoBehaviour
 
 
                     Debug.Log("False");
+                    SceneManager.LoadScene("Maze-game");
+
 
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
