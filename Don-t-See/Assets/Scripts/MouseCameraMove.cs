@@ -3,7 +3,7 @@
 *  This file change camera position 
 *  Citation: https://www.youtube.com/watch?v=BzBIK4_WSJY
 */
-public class MouseCameraMoive : MonoBehaviour
+public class MouseCameraMove : MonoBehaviour
 {
 
     public Camera eyes;
