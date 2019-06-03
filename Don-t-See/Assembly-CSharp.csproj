@@ -119,7 +119,6 @@
     <Compile Include="Assets\Scripts\FixPosition.cs" />
     <Compile Include="Assets\Scripts\GM.cs" />
     <Compile Include="Assets\Scripts\Madlib.cs" />
-    <Compile Include="Assets\Scripts\MouseCameraMoive.cs" />
     <Compile Include="Assets\Scripts\MouseCameraMove.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />

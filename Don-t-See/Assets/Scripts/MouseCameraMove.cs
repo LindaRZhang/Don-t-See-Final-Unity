@@ -8,22 +8,30 @@ public class MouseCameraMove : MonoBehaviour
 
     public Camera eyes;
     public float sensativity = 3;
-    CharacterController controller;
-    float mouseX;
-    float mouseY;
-    float mouseFB; //front and back of mouse
-    float mouseLR; //left right mouse moving
-    float speed = 5;
+    public CharacterController controller;
+    public float mouseX;
+    public float mouseY;
+    public float mouseFB; //front and back of mouse
+    public float mouseLR; //left right mouse moving
+    public float speed = 5;
     public Transform player;
-    public AudioSource chara;//bumping
+    public AudioSource bump;//bumping
+    public AudioSource bumpR;//rightbump
+    public AudioSource bumpL;//leftbump
     public AudioSource h;//walking
+    public AudioSource help;//help
 
     private void Start()
     {
+        h.loop = false;
+        h.Stop();
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;//cursor disappear, press escape and ull see cursor
     }
-
+    public void helps()
+    {
+        help.Play();
+    }
     void Update()
     {
         mouseFB = Input.GetAxis("Vertical");//vertical axis
@@ -35,22 +43,54 @@ public class MouseCameraMove : MonoBehaviour
         Vector3 gravity = new Vector3(0, (float)9.8, 0);
         controller.Move((transform.rotation * movement) - gravity); //move in camera direction-gravity
         eyes.transform.Rotate(-mouseY * sensativity, 0, 0);
-
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetMouseButtonDown(1))
         {
+            help.Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) 
+            || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
+        {
+            h.loop = true;
             h.Play();
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow)
+            || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
         {
+            h.loop = false;
             h.Stop();
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            helps();
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "wall")
         {
-            chara.Play();
+            Debug.Log("Collision");
+            h.Stop();
+            h.loop = false;
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown("a") )
+            {
+                bump.Stop();
+                bumpR.Stop();
+                bumpL.Play();
+
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown("d") )
+            {
+                bump.Stop();
+                bumpL.Stop();
+                bumpR.Play();
+            }
+            else
+            {
+                bumpL.Stop();
+                bumpR.Stop();
+                bump.Play();
+            }
         }
 
     }

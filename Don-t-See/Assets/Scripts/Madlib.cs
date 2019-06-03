@@ -32,6 +32,7 @@ public class Madlib : MonoBehaviour
     public AudioClip noun;
     public AudioClip Adj;
     public AudioClip personName;
+    public AudioClip help;
     public bool entera;
     public bool click = true;
     List<AudioClip> clip = new List<AudioClip>();
@@ -86,6 +87,14 @@ public class Madlib : MonoBehaviour
     {
         soundForWhatToEnter();
         Invoke("makeSelected", 0.1f);
+        if (Input.GetKeyDown("return"))
+        {
+            Start2();
+        }
+    }
+    public void Start2()
+    {
+        
         if (input.text.ToLower() == "start") // if the input is equal to start then do the following
         {
             SSStart();
@@ -105,7 +114,16 @@ public class Madlib : MonoBehaviour
         {
             Clear();
         }
+        if (Input.GetKeyDown("space"))
+        {
+            Congrats.clip = help;
+            Congrats.Play();
+        }
         if (Input.GetMouseButtonDown(1))
+        {
+            Congrats.Stop();
+        }
+        if (Input.GetMouseButtonDown(0))
         {
             z = true;
             if (click == true)//making input being able to type or not
@@ -141,7 +159,6 @@ public class Madlib : MonoBehaviour
                     input.DeactivateInputField();
                 }
             }
-
         }
         else
         {
