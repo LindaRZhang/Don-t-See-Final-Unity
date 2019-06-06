@@ -157,9 +157,10 @@ public class SpeechToText : MonoBehaviour
         Left = false;
         Right = false;
         Back = true;
-        Vector3 movement = new Vector3(MM.mouseLR * Time.deltaTime * 0.01f, 0, MM.mouseFB * Time.deltaTime * 0.01f);
+        /*Vector3 movement = new Vector3(MM.mouseLR * Time.deltaTime * 0.01f, 0, MM.mouseFB * Time.deltaTime * 0.01f);
         Vector3 gravity = new Vector3(0, (float)9.8, 0);
-        t.position = t.position + ((transform.rotation * movement) - gravity); //move in camera direction-gravity
+        t.position = t.position + ((transform.rotation * movement) - gravity); //move in camera direction-gravity*/
+        t.position = t.position + new Vector3(0, 0, -0.3f);
     }
     private void left()
     {
