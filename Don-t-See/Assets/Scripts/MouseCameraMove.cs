@@ -1,25 +1,29 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 /* Linda Rong Zhang
-*  This file change camera position 
+*  This file is related to character's movenment and collision
 *  Citation: https://www.youtube.com/watch?v=BzBIK4_WSJY
 */
 public class MouseCameraMove : MonoBehaviour
 {
 
     public Camera eyes;
-    public float sensativity = 1;
+    public float sensativity = 3;
     public CharacterController controller;
     public float mouseX;
     public float mouseY;
     public float mouseFB; //front and back of mouse
     public float mouseLR; //left right mouse moving
-    public float speed = 2;
+    public float speed = 1.5f;
     public Transform player;
     public AudioSource bump;//bumping
     public AudioSource bumpR;//rightbump
     public AudioSource bumpL;//leftbump
     public AudioSource h;//walking
     public AudioSource help;//help
+    public MainMenu M;
 
     private void Start()
     {
@@ -54,7 +58,7 @@ public class MouseCameraMove : MonoBehaviour
             h.Play();
         }
         if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow)
-            || Input.GetKeyDown("a") || Input.GetKeyDown("s") || Input.GetKeyDown("d") || Input.GetKeyDown("w"))
+            || Input.GetKeyUp("a") || Input.GetKeyUp("s") || Input.GetKeyUp("d") || Input.GetKeyUp("w"))
         {
             h.loop = false;
             h.Stop();
@@ -67,19 +71,30 @@ public class MouseCameraMove : MonoBehaviour
 
     public void OnCollisionEnter(UnityEngine.Collision collision)
     {
+        if (collision.collider.tag == "clock")
+        {
+            Debug.Log("CollideClock");
+            M.menu = false;
+            SceneManager.LoadScene("Madlib");
+            
+        }
+        if (collision.collider.tag == "rabbit")
+        {
+            SceneManager.LoadScene("Maze-game");
+        }
         if (collision.collider.tag == "wall")
         {
             Debug.Log("Collision");
             h.Stop();
             h.loop = false;
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown("a") )
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a") )
             {
                 bump.Stop();
                 bumpR.Stop();
                 bumpL.Play();
 
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown("d") )
+            else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d") )
             {
                 bump.Stop();
                 bumpL.Stop();
