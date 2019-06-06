@@ -7,13 +7,13 @@ public class MouseCameraMove : MonoBehaviour
 {
 
     public Camera eyes;
-    public float sensativity = 3;
+    public float sensativity = 1;
     public CharacterController controller;
     public float mouseX;
     public float mouseY;
     public float mouseFB; //front and back of mouse
     public float mouseLR; //left right mouse moving
-    public float speed = 5;
+    public float speed = 2;
     public Transform player;
     public AudioSource bump;//bumping
     public AudioSource bumpR;//rightbump
@@ -65,7 +65,7 @@ public class MouseCameraMove : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (collision.collider.tag == "wall")
         {

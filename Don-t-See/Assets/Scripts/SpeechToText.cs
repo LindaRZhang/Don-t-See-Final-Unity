@@ -127,7 +127,7 @@ public class SpeechToText : MonoBehaviour
         Foward = true;
         t.position = t.position + new Vector3(0, 0, 0.3f);
     }
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(UnityEngine.Collision collision)
     {
         Vector3 movement = new Vector3(MM.mouseLR * Time.deltaTime * 0.01f, 0, MM.mouseFB * Time.deltaTime * 0.01f);
         Vector3 gravity = new Vector3(0, (float)9.8, 0);

@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Madlib.unity
+    guid: ebceca2c03cdd854da4cb5a07256cd4c
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 438af0ee7b2874ad48d3bd2e85ae878e
+  - enabled: 1
+    path: Assets/Scenes/Menu_bar.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Quiz game.unity
+    guid: ac012feb05ad9431eb050be75940a857
+  - enabled: 1
+    path: Assets/Scenes/Simple-maze.unity
+    guid: 05290234c5d03459386dc82b3b97eaf5
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
+    guid: 4e2a71a5825b54446bfc91d589aaa492
   m_configObjects: {}

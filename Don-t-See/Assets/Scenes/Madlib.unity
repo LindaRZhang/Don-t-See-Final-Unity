@@ -818,9 +818,10 @@ MonoBehaviour:
   noun: {fileID: 8300000, guid: 7f955e47452462c4fbdc914951dc3d8a, type: 3}
   Adj: {fileID: 8300000, guid: 2e673d696cb28fa4bbe1e64ae8f9d524, type: 3}
   personName: {fileID: 8300000, guid: cd0893779fb0c0c4aa6ff1958eeb321a, type: 3}
-  help: {fileID: 0}
   entera: 0
   click: 1
+  M: {fileID: 1000077813}
+  menu: {fileID: 8300000, guid: adb67dbeb9178594aa80dcf2461cd4cf, type: 3}
 --- !u!54 &474930653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1588,6 +1589,7 @@ GameObject:
   - component: {fileID: 1000077812}
   - component: {fileID: 1000077811}
   - component: {fileID: 1000077810}
+  - component: {fileID: 1000077813}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -1720,6 +1722,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000077808}
   m_CullTransparentMesh: 0
+--- !u!114 &1000077813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000077808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083cc4f1f743e9b4ca2d67825c8ba3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Maze: 
+  Madlib: 
+  Quiz: 
+  Brick: 
+  menu: 1
 --- !u!1 &1150192417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1776,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes: {fileID: 534669904}
   sensativity: 3
+  controller: {fileID: 0}
+  mouseX: 0
+  mouseY: 0
+  mouseFB: 0
+  mouseLR: 0
+  speed: 5
   player: {fileID: 534669905}
   bump: {fileID: 1150192425}
   bumpR: {fileID: 804501471}

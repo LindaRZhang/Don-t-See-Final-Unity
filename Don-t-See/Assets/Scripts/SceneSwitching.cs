@@ -13,8 +13,7 @@ public class SceneSwitching : MonoBehaviour {
 	public void Start(){
 		Debug.Log("Hi there");
 	}
-
-	void OnCollisionEnter(Collision other){
+	void OnCollisionEnter(UnityEngine.Collision other){
 		if (other.collider.tag == "Player"){
 			SceneManager.LoadScene(sceneName);
 		}

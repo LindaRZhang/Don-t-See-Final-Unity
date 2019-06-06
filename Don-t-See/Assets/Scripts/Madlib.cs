@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 /* Linda Rong Zhang
 *  This file executes the madlib game
@@ -32,10 +33,11 @@ public class Madlib : MonoBehaviour
     public AudioClip noun;
     public AudioClip Adj;
     public AudioClip personName;
-    public AudioClip help;
     public bool entera;
     public bool click = true;
+    public MainMenu M;
     List<AudioClip> clip = new List<AudioClip>();
+    public AudioClip menu;
     //got every audio clip from https://www.text2speech.org/ except the bump sound that I made
     public void soundForWhatToEnter()
     {
@@ -75,7 +77,24 @@ public class Madlib : MonoBehaviour
         input.text = "";
         Clear();
         input.placeholder.GetComponent<Text>().text = "Enter a " + w[currentWordIndex]; //change placeholder
-        Congrats.clip = clip[currentWordIndex];
+        if (w[currentWordIndex] == "noun")
+        {
+            Congrats.clip = noun;
+        }
+        if (w[currentWordIndex] == "person")
+        {
+           Congrats.clip = personName;
+        }
+
+        if (w[currentWordIndex] == "verb")
+        {
+            Congrats.clip = verb;
+        }
+
+        if (w[currentWordIndex] == "adjective")
+        {
+            Congrats.clip = Adj;
+        }
         Congrats.Play();
     }
 
@@ -116,8 +135,8 @@ public class Madlib : MonoBehaviour
         }
         if (Input.GetKeyDown("space"))
         {
-            Congrats.clip = help;
-            Congrats.Play();
+            //Congrats.clip = help;
+            //Congrats.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
@@ -198,6 +217,25 @@ public class Madlib : MonoBehaviour
         input.DeactivateInputField();
         Congrats.clip = Song;
         Congrats.Play();
-        z = false;
+       if (M.menu)
+        {
+            Congrats.clip = menu;
+            Congrats.Play();
+            if (input.text == "P" || input.text == "p")
+            {
+                Debug.Log("LoadMadLIB");
+                SceneManager.GetActiveScene();
+            }
+            else if (input.text == "Q" || input.text == "q")
+            {
+                Debug.Log("LoadMenu");
+                SceneManager.LoadScene("Menu_bar");
+            }
+        }
+        else
+        {
+            Debug.Log("LoadSimpleMaze");
+            SceneManager.LoadScene("Simple-maze");
+        }
     }
 }
