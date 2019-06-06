@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 /* Instruction for using this save system:
  * in the script you should find three scripts: Player, PlayerData, and this file, SaveSystem
+ * add the Player script to the Player object if you want to use this save system
  * in the Player class in Player script, there's 2 method: SavePlayer and LoadPlayer
  * as it sounds, you invoke saving by invoking the SavePlayer method, loading by LoadPlayer method
  * saving will create a binary file named player.save, containing player last position, and the scence which the player was in when invoked
