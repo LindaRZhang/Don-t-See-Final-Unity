@@ -137,8 +137,8 @@ public class Madlib : MonoBehaviour
             if (menu == true)//Reload MadLib
             {
                 Application.Quit();
-                NetworkManager.singleton.ServerChangeScene("Menu_bar");
-                //SceneManager.LoadScene("Menu_bar");
+                //NetworkManager.singleton.ServerChangeScene("Menu_bar");
+                SceneManager.LoadScene("Menu_bar");
             }
             else//simple maze
             {
