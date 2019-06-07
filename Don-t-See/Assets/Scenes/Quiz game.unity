@@ -1200,7 +1200,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionaudio: {fileID: 0}
-  AudioClips: []
+  AudioClips:
+  - {fileID: 8300000, guid: ff733dbf56ae446199e77fe1a8d988cd, type: 3}
+  - {fileID: 8300000, guid: 421ca21f51129492ea7b3681debf9102, type: 3}
+  - {fileID: 8300000, guid: 76965471360224f5eb013aa53139714a, type: 3}
+  - {fileID: 8300000, guid: 66712461cbcc140f9ab5e059d1545441, type: 3}
+  - {fileID: 8300000, guid: 1d54db4e05b2543c38c6f0b269ed418b, type: 3}
+  - {fileID: 8300000, guid: e866bc60181444183a2f5f4e066ef321, type: 3}
+  - {fileID: 8300000, guid: 9b8e8171207b44a4da27b94a73ad4750, type: 3}
   music1: {fileID: 237363358}
   music2: {fileID: 1552618784}
   redButton: {fileID: 0}
@@ -1517,7 +1524,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionaudio: {fileID: 0}
-  AudioClips: []
+  AudioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   music1: {fileID: 1552618784}
   music2: {fileID: 439933023}
   redButton: {fileID: 1494581038}

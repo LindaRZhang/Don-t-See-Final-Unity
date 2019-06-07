@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement1 : MonoBehaviour {
 
@@ -10,8 +11,11 @@ public class PlayerMovement1 : MonoBehaviour {
     
 	void FixedUpdate ()
 	{
-		
-		rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            SceneManager.LoadScene("Menu_bar");
+        }
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
 		if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))	
 		{

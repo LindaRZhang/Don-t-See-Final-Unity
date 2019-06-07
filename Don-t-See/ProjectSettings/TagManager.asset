@@ -8,6 +8,8 @@ TagManager:
   - clock
   - player
   - rabbit
+  - Obstacle
+  - Dog
   layers:
   - Default
   - TransparentFX

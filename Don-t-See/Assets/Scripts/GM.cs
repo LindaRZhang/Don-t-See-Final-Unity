@@ -60,7 +60,11 @@ public class GM : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            Application.Quit();
+            SceneManager.LoadScene("Menu_bar");
+        }
     }
 
 	public void SetUp()

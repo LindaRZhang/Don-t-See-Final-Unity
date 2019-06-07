@@ -25,7 +25,6 @@ public class MouseCameraMove : MonoBehaviour
     public AudioSource help;//help
     public MainMenu M;
     public Madlib Madlib;
-    public Player playerData;
 
     private void Start()
     {
@@ -40,6 +39,10 @@ public class MouseCameraMove : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            SceneManager.LoadScene("Menu_bar");
+        }
         mouseFB = Input.GetAxis("Vertical");//vertical axis
         mouseLR = Input.GetAxis("Horizontal");
         mouseX = Input.GetAxis("Mouse X");
@@ -81,8 +84,13 @@ public class MouseCameraMove : MonoBehaviour
             Debug.Log("CollideClock");
             M.menu = false;
             Application.Quit();
-	    playerData.SavePlayer();
-            SceneManager.LoadScene("Madlib"); 
+            SceneManager.LoadScene("Madlib");
+            
+        }
+        if(collision.collider.tag == "Dog")
+        {
+            Application.Quit();
+            SceneManager.LoadScene("Quiz game");
         }
         if (collision.collider.tag == "rabbit")
         {

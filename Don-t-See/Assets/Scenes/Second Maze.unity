@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 35223824}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 59865593}
   m_Layer: 0
   m_Name: Cube (19)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 80934191}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 99260438}
   - component: {fileID: 99260437}
   - component: {fileID: 99260439}
+  - component: {fileID: 99260440}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -867,6 +868,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 919296366}
+--- !u!82 &99260440
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99260435}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ad45c2c9f2fba024bbaf866233b6651a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &111525025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParkingLot01
       objectReference: {fileID: 0}
+    - target: {fileID: 1282064840322410, guid: 4544a0659b11944ec9e0d388f27d9118, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4563474872982284, guid: 4544a0659b11944ec9e0d388f27d9118, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.89
@@ -1686,6 +1787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1086700807335092, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4631888826307146, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6
@@ -2050,6 +2155,10 @@ PrefabInstance:
     - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_Name
       value: InfoSign01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4290544097961974, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2562,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lion
       objectReference: {fileID: 0}
+    - target: {fileID: 1553991042791506, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4886101968738366, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.302156
@@ -2613,6 +2726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95995790678533120, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
+    - {fileID: 54254021876192096, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
 --- !u!1001 &370220825
 PrefabInstance:
@@ -3161,7 +3275,7 @@ GameObject:
   - component: {fileID: 469400501}
   m_Layer: 0
   m_Name: Cube (23)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3407,7 +3521,7 @@ GameObject:
   - component: {fileID: 523670506}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3793,7 +3907,7 @@ GameObject:
   - component: {fileID: 603550671}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4377,7 +4491,7 @@ GameObject:
   - component: {fileID: 703588256}
   m_Layer: 0
   m_Name: Cube (17)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4525,6 +4639,10 @@ PrefabInstance:
     - target: {fileID: 1086700807335092, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086700807335092, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4631888826307146, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4730,6 +4848,10 @@ PrefabInstance:
     - target: {fileID: 1086700807335092, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
       propertyPath: m_Name
       value: Bridge01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086700807335092, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4631888826307146, guid: 37c3f332c16484799ac2dea44c31446b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5519,7 +5641,7 @@ GameObject:
   - component: {fileID: 853873341}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5965,12 +6087,13 @@ MonoBehaviour:
   mouseLR: 0
   speed: 2.5
   player: {fileID: 919296366}
-  bump: {fileID: 0}
+  bump: {fileID: 919296371}
   bumpR: {fileID: 0}
   bumpL: {fileID: 0}
-  h: {fileID: 0}
+  h: {fileID: 99260440}
   help: {fileID: 0}
   M: {fileID: 0}
+  Madlib: {fileID: 0}
 --- !u!136 &919296368
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6038,6 +6161,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!82 &919296371
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919296365}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 377548792d4970f4b9bf10dbe7772b24, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!143 &919296372
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6526,7 +6745,7 @@ GameObject:
   - component: {fileID: 975019816}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6617,7 +6836,7 @@ GameObject:
   - component: {fileID: 982537862}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7038,7 +7257,7 @@ GameObject:
   - component: {fileID: 1000759824}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7125,6 +7344,10 @@ PrefabInstance:
     - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_Name
       value: Car02 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7488,6 +7711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden01D
       objectReference: {fileID: 0}
+    - target: {fileID: 1148435925991490, guid: c9cb46cae144644c2b44b135b8562a8f, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4418049690190814, guid: c9cb46cae144644c2b44b135b8562a8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.186264
@@ -7573,7 +7800,7 @@ GameObject:
   - component: {fileID: 1073569570}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7660,6 +7887,10 @@ PrefabInstance:
     - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_Name
       value: Car02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7748,6 +7979,10 @@ PrefabInstance:
     - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_Name
       value: Car02 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8023,7 +8258,7 @@ GameObject:
   - component: {fileID: 1127628657}
   m_Layer: 0
   m_Name: Cube (20)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8273,6 +8508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Penguin
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 4265787259ee6f846a16b2b460d9bb8a, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4265787259ee6f846a16b2b460d9bb8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.056
@@ -8341,6 +8580,10 @@ PrefabInstance:
     - target: {fileID: 1892763254080828, guid: ab577bf95fd0e4a45a861bf583ceb5c2, type: 3}
       propertyPath: m_Name
       value: FireStation01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892763254080828, guid: ab577bf95fd0e4a45a861bf583ceb5c2, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4945656997075942, guid: ab577bf95fd0e4a45a861bf583ceb5c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8419,7 +8662,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8bdede076ede6499d8b028091a63afe3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.232
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8732,6 +8975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 8154408112785579166, guid: 55a8af445a2b42dab98418601634dd47,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8154408112785579160, guid: 55a8af445a2b42dab98418601634dd47,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9042,7 +9290,7 @@ GameObject:
   - component: {fileID: 1368320111}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9285,7 +9533,7 @@ GameObject:
   - component: {fileID: 1426471181}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9463,6 +9711,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: a781aa61e9361024cac36d44dda87c3a, type: 3}
       propertyPath: m_Name
       value: Chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a781aa61e9361024cac36d44dda87c3a, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a781aa61e9361024cac36d44dda87c3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10222,7 +10474,7 @@ GameObject:
   - component: {fileID: 1527582723}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10386,6 +10638,10 @@ PrefabInstance:
     - target: {fileID: 170924, guid: 652f1b1c2ef586f45ac26a1ddffab296, type: 3}
       propertyPath: m_Name
       value: GuitarA
+      objectReference: {fileID: 0}
+    - target: {fileID: 170924, guid: 652f1b1c2ef586f45ac26a1ddffab296, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 410202, guid: 652f1b1c2ef586f45ac26a1ddffab296, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10812,6 +11068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InfoSign01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4290544097961974, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.454866
@@ -10959,6 +11219,10 @@ PrefabInstance:
     - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_Name
       value: InfoSign01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4290544097961974, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11267,7 +11531,7 @@ GameObject:
   - component: {fileID: 1708778638}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11689,7 +11953,7 @@ GameObject:
   - component: {fileID: 1731146043}
   m_Layer: 0
   m_Name: Cube (22)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11778,6 +12042,10 @@ PrefabInstance:
     - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_Name
       value: Car02 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11870,7 +12138,7 @@ GameObject:
   - component: {fileID: 1766117952}
   m_Layer: 0
   m_Name: Cube (18)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12024,7 +12292,7 @@ GameObject:
   - component: {fileID: 1780181419}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12297,7 +12565,7 @@ GameObject:
   - component: {fileID: 1797236759}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12550,7 +12818,7 @@ GameObject:
   - component: {fileID: 1851166706}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13189,7 +13457,7 @@ GameObject:
   - component: {fileID: 2029210547}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13260,7 +13528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029210546}
   m_LocalRotation: {x: -0, y: -0.7069725, z: -0, w: 0.7072411}
-  m_LocalPosition: {x: 15.4, y: 0.38, z: -35}
+  m_LocalPosition: {x: 15.4, y: 0.85, z: -35}
   m_LocalScale: {x: 5.617692, y: 0.427432, z: 0.4416789}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13276,6 +13544,10 @@ PrefabInstance:
     - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_Name
       value: Car02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13682,6 +13954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car02
       objectReference: {fileID: 0}
+    - target: {fileID: 1759925879573872, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4409284902174072, guid: f9e299acd82704891a58d65c21012ec0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.22
@@ -13952,7 +14228,7 @@ GameObject:
   - component: {fileID: 2126750741}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14039,6 +14315,10 @@ PrefabInstance:
     - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_Name
       value: InfoSign01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629192710611648, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     - target: {fileID: 4290544097961974, guid: 655202bf9bf874e1ba89df07a7858bbb, type: 3}
       propertyPath: m_LocalPosition.x

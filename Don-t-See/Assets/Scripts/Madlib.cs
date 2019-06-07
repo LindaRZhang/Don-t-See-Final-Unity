@@ -119,6 +119,10 @@ public class Madlib : MonoBehaviour
     
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            SceneManager.LoadScene("Menu_bar");
+        }
         if (Input.GetKeyDown("return") && input.text == "")
         {
             Congrats.clip = type;
@@ -224,7 +228,7 @@ public class Madlib : MonoBehaviour
         word.text = Finish;
         input.text = "Congratulations!";
         input.DeactivateInputField();
-        Congrats.clip = Song;
+        Congrats.clip = Song;   
         Congrats.Play();
         Time.timeScale = 1;
         if (M.menu)

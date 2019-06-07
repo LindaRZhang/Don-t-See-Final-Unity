@@ -28,39 +28,42 @@ public class MainMenu : MonoBehaviour
     public string Race;
     public bool menu = false;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
+    void Update()
+    {
+        Cursor.visible = true;
+    }
     public void PlayMaze()
     {
         menu = true;
         Debug.Log("maze");
-        Application.Quit();
         SceneManager.LoadScene(Maze);
     }
     public void PlayMadlib()
     {
         menu = true;
         Debug.Log("madlib");
-        Application.Quit();
         SceneManager.LoadScene(Madlib);
     }
     public void PlayRace()
     {
         menu = true;
         Debug.Log("race");
-        Application.Quit();
         SceneManager.LoadScene(Race);
     }
     public void PlayQuiz()
     {
         menu = true;
         Debug.Log("quiz");
-        Application.Quit();
         SceneManager.LoadScene(Quiz);
     }
     public void PlayBrick()
     {
         menu = true;
         Debug.Log("brick");
-        Application.Quit();
         SceneManager.LoadScene(Brick);
     }
     public void Exit()
