@@ -36,25 +36,14 @@ public class Madlib : MonoBehaviour
     public bool entera;
     public bool click = true;
     public MainMenu M;
-    List<AudioClip> clip = new List<AudioClip>();
-    public AudioClip menu;
+    public AudioClip Menu;
+    public AudioClip type;
+    public AudioClip Maze;
+    public bool maze = false;
+    public bool menu = false;
+    public bool madli;
     //got every audio clip from https://www.text2speech.org/ except the bump sound that I made
-    public void soundForWhatToEnter()
-    {
-        clip.Add(personName);
-        clip.Add(Adj);
-        clip.Add(Adj);
-        clip.Add(noun);
-        clip.Add(Adj);
-        clip.Add(noun);
-        clip.Add(Adj);
-        clip.Add(verb);
-        clip.Add(verb);
-        clip.Add(personName);
-        clip.Add(verb);
-        clip.Add(Adj);
-        clip.Add(verb);
-    }
+    
     public void enter()
     {
         z = true;
@@ -77,21 +66,21 @@ public class Madlib : MonoBehaviour
         input.text = "";
         Clear();
         input.placeholder.GetComponent<Text>().text = "Enter a " + w[currentWordIndex]; //change placeholder
-        if (w[currentWordIndex] == "noun")
+        if (w[currentWordIndex] == "[noun]" || w[currentWordIndex] == "[noun].")
         {
             Congrats.clip = noun;
         }
-        if (w[currentWordIndex] == "person")
+        if (w[currentWordIndex] == "[person]")
         {
            Congrats.clip = personName;
         }
 
-        if (w[currentWordIndex] == "verb")
+        if (w[currentWordIndex] == "[verb]" || (w[currentWordIndex] == "[verb]."))
         {
             Congrats.clip = verb;
         }
 
-        if (w[currentWordIndex] == "adjective")
+        if (w[currentWordIndex] == "[adjective]")
         {
             Congrats.clip = Adj;
         }
@@ -104,8 +93,9 @@ public class Madlib : MonoBehaviour
     }
     public void Start()
     {
-        soundForWhatToEnter();
+        //soundForWhatToEnter();
         Invoke("makeSelected", 0.1f);
+        madli = true;
         if (Input.GetKeyDown("return"))
         {
             Start2();
@@ -129,22 +119,41 @@ public class Madlib : MonoBehaviour
     
     public void Update()
     {
+        if (Input.GetKeyDown("return") && input.text == "")
+        {
+            Congrats.clip = type;
+            Congrats.Play();
+        }
         if (input.text.ToLower().Contains("clear") || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             Clear();
         }
         if (Input.GetKeyDown("space"))
         {
-            //Congrats.clip = help;
-            //Congrats.Play();
+            Congrats.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
-            Congrats.Stop();
+            if (menu == true)//Reload MadLib
+            {
+                Application.Quit();
+                NetworkManager.singleton.ServerChangeScene("Menu_bar");
+                //SceneManager.LoadScene("Menu_bar");
+            }
+            else//simple maze
+            {
+                Application.Quit();
+                SceneManager.LoadScene("Simple-maze");
+            }
         }
         if (Input.GetMouseButtonDown(0))
         {
             z = true;
+            if (menu == true)//Reload Madlab
+            {
+                Application.Quit();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             if (click == true)//making input being able to type or not
             {
                 input.interactable = true;
@@ -164,7 +173,7 @@ public class Madlib : MonoBehaviour
             word.text = "Welcome to MadLib";
             if (state == true)
             {
-                if (currentWordIndex <= w.Count())
+                if (currentWordIndex <= (w.Count()-1))
                 {
                     inputed.Add(input.text);
                     currentWordIndex++;
@@ -217,25 +226,18 @@ public class Madlib : MonoBehaviour
         input.DeactivateInputField();
         Congrats.clip = Song;
         Congrats.Play();
-       if (M.menu)
+        Time.timeScale = 1;
+        if (M.menu)
         {
-            Congrats.clip = menu;
+            menu = true;
+            Congrats.clip = Menu;//optinon to go back menu
             Congrats.Play();
-            if (input.text == "P" || input.text == "p")
-            {
-                Debug.Log("LoadMadLIB");
-                SceneManager.GetActiveScene();
-            }
-            else if (input.text == "Q" || input.text == "q")
-            {
-                Debug.Log("LoadMenu");
-                SceneManager.LoadScene("Menu_bar");
-            }
         }
-        else
+        else//option to go back maze
         {
-            Debug.Log("LoadSimpleMaze");
-            SceneManager.LoadScene("Simple-maze");
+            Congrats.clip = Maze;
+            Congrats.Play();
+            maze = true;
         }
     }
 }

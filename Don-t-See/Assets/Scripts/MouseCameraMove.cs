@@ -16,7 +16,7 @@ public class MouseCameraMove : MonoBehaviour
     public float mouseY;
     public float mouseFB; //front and back of mouse
     public float mouseLR; //left right mouse moving
-    public float speed = 1.5f;
+    public float speed = 2f;
     public Transform player;
     public AudioSource bump;//bumping
     public AudioSource bumpR;//rightbump
@@ -24,6 +24,7 @@ public class MouseCameraMove : MonoBehaviour
     public AudioSource h;//walking
     public AudioSource help;//help
     public MainMenu M;
+    public Madlib Madlib;
 
     private void Start()
     {
@@ -65,7 +66,10 @@ public class MouseCameraMove : MonoBehaviour
         }
         if (Input.GetKeyDown("space"))
         {
-            helps();
+            if (Madlib.madli != true)
+            {
+                helps();
+            }
         }
     }
 
@@ -75,6 +79,7 @@ public class MouseCameraMove : MonoBehaviour
         {
             Debug.Log("CollideClock");
             M.menu = false;
+            Application.Quit();
             SceneManager.LoadScene("Madlib");
             
         }

@@ -2688,16 +2688,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fae79926795ff9e0191038b9b8edb674, type: 2}
-    - target: {fileID: 3174598431239217150, guid: 949eccdfc97011c8db9eb0a925ca3af8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3174598432968108637, guid: 949eccdfc97011c8db9eb0a925ca3af8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fae79926795ff9e0191038b9b8edb674, type: 2}
+    - target: {fileID: 3174598431239217150, guid: 949eccdfc97011c8db9eb0a925ca3af8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3174598432968108636, guid: 949eccdfc97011c8db9eb0a925ca3af8,
         type: 3}
       propertyPath: m_Enabled
@@ -2738,7 +2738,7 @@ MonoBehaviour:
   mouseY: 0
   mouseFB: 0
   mouseLR: 0
-  speed: 1.5
+  speed: 2.5
   player: {fileID: 929659268}
   bump: {fileID: 929659277}
   bumpR: {fileID: 842413326}
@@ -2746,6 +2746,7 @@ MonoBehaviour:
   h: {fileID: 523077293}
   help: {fileID: 1523406769}
   M: {fileID: 1624203292}
+  Madlib: {fileID: 0}
 --- !u!136 &929659270
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4627,7 +4628,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a8bcb4b333ee05e4f970d7b4a7fb9359, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aca7150e134251e4bb39fe4b255c0251, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6536,7 +6537,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 13.66
+  MaxDistance: 14.89
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0

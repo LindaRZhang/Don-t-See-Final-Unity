@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1494581037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5493fa267af433fb48def2df45ccc1, type: 3}
+  m_Script: {fileID: 11500000, guid: bf0ea9a607a1ed64faf73bbf301091a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionaudio: {fileID: 0}
@@ -1116,8 +1116,8 @@ GameObject:
   - component: {fileID: 1516980240}
   - component: {fileID: 1516980242}
   - component: {fileID: 1516980241}
-  - component: {fileID: 1516980243}
   - component: {fileID: 1516980244}
+  - component: {fileID: 1516980243}
   m_Layer: 5
   m_Name: question
   m_TagString: Untagged
@@ -1196,18 +1196,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516980239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5493fa267af433fb48def2df45ccc1, type: 3}
+  m_Script: {fileID: 11500000, guid: bf0ea9a607a1ed64faf73bbf301091a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionaudio: {fileID: 0}
-  AudioClips:
-  - {fileID: 8300000, guid: ff733dbf56ae446199e77fe1a8d988cd, type: 3}
-  - {fileID: 8300000, guid: 421ca21f51129492ea7b3681debf9102, type: 3}
-  - {fileID: 8300000, guid: 76965471360224f5eb013aa53139714a, type: 3}
-  - {fileID: 8300000, guid: 66712461cbcc140f9ab5e059d1545441, type: 3}
-  - {fileID: 8300000, guid: 1d54db4e05b2543c38c6f0b269ed418b, type: 3}
-  - {fileID: 8300000, guid: e866bc60181444183a2f5f4e066ef321, type: 3}
-  - {fileID: 0}
+  AudioClips: []
   music1: {fileID: 237363358}
   music2: {fileID: 1552618784}
   redButton: {fileID: 0}
@@ -1444,9 +1437,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1614132646}
-  - component: {fileID: 1614132649}
   - component: {fileID: 1614132648}
   - component: {fileID: 1614132647}
+  - component: {fileID: 1614132650}
   m_Layer: 5
   m_Name: question
   m_TagString: Untagged
@@ -1511,7 +1504,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614132645}
   m_CullTransparentMesh: 0
---- !u!114 &1614132649
+--- !u!114 &1614132650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1520,7 +1513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1614132645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5493fa267af433fb48def2df45ccc1, type: 3}
+  m_Script: {fileID: 11500000, guid: bf0ea9a607a1ed64faf73bbf301091a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionaudio: {fileID: 0}

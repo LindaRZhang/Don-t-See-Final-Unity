@@ -5963,7 +5963,7 @@ MonoBehaviour:
   mouseY: 0
   mouseFB: 0
   mouseLR: 0
-  speed: 1.5
+  speed: 2.5
   player: {fileID: 919296366}
   bump: {fileID: 0}
   bumpR: {fileID: 0}
@@ -6051,7 +6051,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.5
-  m_SlopeLimit: 30
+  m_SlopeLimit: 60
   m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.0001
@@ -6448,7 +6448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957877051}
   m_LocalRotation: {x: 0.014176039, y: 0.003684988, z: 0.38536808, w: 0.92264676}
-  m_LocalPosition: {x: 0.679, y: 1.519, z: -1.444}
+  m_LocalPosition: {x: 0.55, y: 1.33, z: -1.444}
   m_LocalScale: {x: 3.5087714, y: -0.0017849198, z: 2.389435}
   m_Children: []
   m_Father: {fileID: 522142150}
@@ -8419,7 +8419,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8bdede076ede6499d8b028091a63afe3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.613
+  m_Volume: 0.232
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10885,7 +10885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584439736}
   m_LocalRotation: {x: -0.033424202, y: 0.0069579883, z: -0.3435585, w: 0.93851054}
-  m_LocalPosition: {x: 10.059, y: 1.512, z: -1.325}
+  m_LocalPosition: {x: 11.07, y: 0.87, z: -1.325}
   m_LocalScale: {x: 4.1428103, y: -0.0017849198, z: 2.4186606}
   m_Children: []
   m_Father: {fileID: 42178349}

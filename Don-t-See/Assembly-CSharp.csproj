@@ -74,7 +74,6 @@
     <Compile Include="Assets\btnFX.cs" />
     <Compile Include="Assets\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\Congrat.cs" />
-    <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -120,6 +119,7 @@
     <Compile Include="Assets\Scripts\Bricks.cs" />
     <Compile Include="Assets\Scripts\CameraFollowCharacter.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\EndTrigger.cs" />
     <Compile Include="Assets\Scripts\FixPosition.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />

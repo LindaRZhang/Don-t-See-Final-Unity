@@ -821,7 +821,11 @@ MonoBehaviour:
   entera: 0
   click: 1
   M: {fileID: 1000077813}
-  menu: {fileID: 8300000, guid: adb67dbeb9178594aa80dcf2461cd4cf, type: 3}
+  Menu: {fileID: 8300000, guid: b0f027b4b1f22fb42819343da9e7fe84, type: 3}
+  type: {fileID: 8300000, guid: b8b4eb0ddb2233142b8df7f36d8090e5, type: 3}
+  Maze: {fileID: 8300000, guid: 37712c653af2a24478d5dfcffbd38d7f, type: 3}
+  maze: 0
+  menu: 0
 --- !u!54 &474930653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1738,6 +1742,7 @@ MonoBehaviour:
   Madlib: 
   Quiz: 
   Brick: 
+  Race: 
   menu: 1
 --- !u!1 &1150192417
 GameObject:
@@ -1788,6 +1793,7 @@ MonoBehaviour:
   bumpL: {fileID: 2075391524}
   h: {fileID: 534669907}
   help: {fileID: 1359764276}
+  M: {fileID: 0}
 --- !u!54 &1150192419
 Rigidbody:
   m_ObjectHideFlags: 0

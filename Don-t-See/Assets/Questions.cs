@@ -134,7 +134,7 @@ public class Questions : MonoBehaviour
                 }
 
             }
-            if (count >= 6)
+            if (count == 6)
             {
                 if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
