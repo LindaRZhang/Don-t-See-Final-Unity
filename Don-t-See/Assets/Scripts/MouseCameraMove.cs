@@ -39,6 +39,11 @@ public class MouseCameraMove : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            SceneManager.LoadScene("Menu_bar");
+        }
         mouseFB = Input.GetAxis("Vertical");//vertical axis
         mouseLR = Input.GetAxis("Horizontal");
         mouseX = Input.GetAxis("Mouse X");
@@ -82,6 +87,11 @@ public class MouseCameraMove : MonoBehaviour
             Application.Quit();
             SceneManager.LoadScene("Madlib");
             
+        }
+        if(collision.collider.tag == "Dog")
+        {
+            Application.Quit();
+            SceneManager.LoadScene("Quiz game");
         }
         if (collision.collider.tag == "rabbit")
         {

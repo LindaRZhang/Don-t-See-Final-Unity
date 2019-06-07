@@ -61,6 +61,12 @@ public class Questions : MonoBehaviour
     void Update()
 
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            SceneManager.LoadScene("Menu_bar");
+        }
+      
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
            
@@ -141,7 +147,7 @@ public class Questions : MonoBehaviour
 
 
                     Debug.Log("False");
-                    SceneManager.LoadScene("Maze-game");
+                    SceneManager.LoadScene("Second Maze");
 
 
                 }

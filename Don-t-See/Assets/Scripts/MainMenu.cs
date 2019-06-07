@@ -28,6 +28,14 @@ public class MainMenu : MonoBehaviour
     public string Race;
     public bool menu = false;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
+    void Update()
+    {
+        Cursor.visible = true;
+    }
     public void PlayMaze()
     {
         menu = true;
