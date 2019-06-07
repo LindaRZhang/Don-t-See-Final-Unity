@@ -25,6 +25,7 @@ public class MouseCameraMove : MonoBehaviour
     public AudioSource help;//help
     public MainMenu M;
     public Madlib Madlib;
+    public Player playerData;
 
     private void Start()
     {
@@ -80,8 +81,8 @@ public class MouseCameraMove : MonoBehaviour
             Debug.Log("CollideClock");
             M.menu = false;
             Application.Quit();
-            SceneManager.LoadScene("Madlib");
-            
+	    playerData.SavePlayer();
+            SceneManager.LoadScene("Madlib"); 
         }
         if (collision.collider.tag == "rabbit")
         {
