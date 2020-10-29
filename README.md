@@ -8,5 +8,7 @@
     Extract the ZIP
     Open the "New Unity Project.exe"
  
- 
+ # Demo Video
+ [![Alt text for your video](https://img.youtube.com/vi/bhHuIiqo1fw/0.jpg)](https://youtu.be/bhHuIiqo1fw)
+
  Have fun!
